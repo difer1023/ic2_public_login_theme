@@ -1,0 +1,78 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+@font-face {
+     font-family: 'AdventProRegular';
+     src: url('../fonts/adventpro-regular.ttf');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+.aui body {
+background: url("../images/background-2.png") no-repeat top #FFFFFF;
+background-size:100%;
+}
+
+#column-1 .portlet-column-content.empty {
+    padding: 70px;
+}
+
+.aui h1, .aui h2, .aui h3, .aui h4, .aui h5, .aui h6 {
+    font-family: AdventProRegular;
+}
+
+.aui select, .aui textarea, .aui input[type="text"], .aui input[type="password"], .aui input[type="datetime"], .aui input[type="datetime-local"], .aui input[type="date"], .aui input[type="month"], .aui input[type="time"], .aui input[type="week"], .aui input[type="number"], .aui input[type="email"], .aui input[type="url"], .aui input[type="search"], .aui input[type="tel"], .aui input[type="color"], .aui .uneditable-input {
+    border-radius: 10px;
+}
+
+.aui .control-group.success input, .aui .control-group.success select, .aui .control-group.success textarea {
+    border-color: #aad284;
+    background-color: #aad284;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+.aui .control-group.success .checkbox, .aui .control-group.success .radio, .aui .control-group.success input, .aui .control-group.success select, .aui .control-group.success textarea {
+    color: #313c42;
+}
+
+.aui .control-group.error input, .aui .control-group.error select, .aui .control-group.error textarea {
+    border-color: #d67a7a78;
+    background-color: #d67a7a78;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+.aui .control-group.error .control-label, .aui .control-group.error .help-block, .aui .control-group.error .help-inline {
+    color: #d67a7a;
+}
+
+
+.sign-in-form .input-container .fieldset .field {
+    text-align: center;
+}
+
+.sign-in-form .input-container .button-holder .btn-primary {
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #ffffff;
+    border-color: #121315;
+    background: #ffffff;
+    color: #121315;
+    border-radius: 10px;
+}
+
+.sign-in-form .input-container .button-holder {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+

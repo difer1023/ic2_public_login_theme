@@ -32,13 +32,10 @@ ${theme.include(body_top_include)}
 			</h1>
 		</div>
 
-		<#if has_navigation || is_signed_in>
-			<#include "${full_templates_path}/navigation.ftl" />
-		</#if>
+		
 	</header>
 
 	<div id="content">
-		<nav id="breadcrumbs"><@liferay.breadcrumbs /></nav>
 
 		<#if selectable>
 			${theme.include(content_include)}

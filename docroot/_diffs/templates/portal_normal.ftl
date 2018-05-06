@@ -9,6 +9,10 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
+	<script type="text/javascript" src="${javascript_folder}/jquery-3.3.1.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="${javascript_folder}/semantic.min.js" charset="utf-8"></script>
+	
+
 	${theme.include(top_head_include)}
 </head>
 
@@ -31,7 +35,14 @@ ${theme.include(body_top_include)}
 				</a>
 			</h1>
 		</div>
-
+		<div class="ui labeled button" tabindex="0">
+		  <div class="ui red button">
+		    <i class="heart icon"></i> Like
+		  </div>
+		  <a class="ui basic red left pointing label">
+		    1,048
+		  </a>
+		</div>
 		
 	</header>
 

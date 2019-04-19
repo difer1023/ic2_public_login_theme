@@ -9,43 +9,43 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
-	<script type="text/javascript" src="${javascript_folder}/jquery-3.3.1.min.js" charset="utf-8"></script>
-	<script type="text/javascript" src="${javascript_folder}/semantic.min.js" charset="utf-8"></script>
-	
+	<link rel="stylesheet" href="${css_folder}/adminlte/font-awesome/css/font-awesome.min.css">
+	  <!-- Ionicons -->
+	  <link rel="stylesheet" href="${css_folder}/adminlte/ionicons.min.css">
+	  
+	  <!-- Theme style -->
+	  <link rel="stylesheet" href="${css_folder}/adminlte/AdminLTE.css?v1.1">
+	  <!-- AdminLTE Skins. Choose a skin from the css/skins
+	   folder instead of downloading all of them to reduce the load. -->
+	  <link rel="stylesheet" href="${css_folder}/adminlte/_all-skins.min.css">
+	<link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        
 
 	${theme.include(top_head_include)}
+	
+	<!-- jQuery 3 -->
+	<script src="${javascript_folder}/jquery-3.3.1.min.js"></script>
 </head>
 
-<body class="${css_class}">
+<body class="${css_class} ic2 hold-transition login-page">
 
 <a href="#main-content" id="skip-to-content"><@liferay.language key="skip-to-content" /></a>
 
 ${theme.include(body_top_include)}
 
-<#if is_signed_in>
+<#if is_signed_in && admin_user>
 	<@liferay.dockbar />
 </#if>
 
-<div class="container-fluid" id="wrapper">
-	<header id="banner" role="banner">
-		<div id="heading">
-			<h1 class="site-title">
-				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-					<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
-				</a>
-			</h1>
-		</div>
-		<div class="ui labeled button" tabindex="0">
-		  <div class="ui red button">
-		    <i class="heart icon"></i> Like
-		  </div>
-		  <a class="ui basic red left pointing label">
-		    1,048
-		  </a>
-		</div>
-		
-	</header>
+<#assign imagen_fondo = layout.getExpandoBridge().getAttribute("imagenFondo") >
+<#if imagen_fondo>
+	<div class="background-image">
+		<img src="${images_folder}/background-2.png">
+	</div>
+</#if>
 
+<div class="container-fluid" id="wrapper">
 	<div id="content">
 
 		<#if selectable>
@@ -58,17 +58,21 @@ ${theme.include(body_top_include)}
 			${theme.wrapPortlet("portlet.ftl", content_include)}
 		</#if>
 	</div>
-
-	<footer id="footer" role="contentinfo">
-		<p class="powered-by">
-			
-		</p>
-	</footer>
 </div>
 
 ${theme.include(body_bottom_include)}
 
 ${theme.include(bottom_include)}
+
+<!-- AdminLTE App -->
+<script src="${javascript_folder}/adminlte/adminlte.min.js"></script>
+<!-- Sparkline -->
+<script src="${javascript_folder}/adminlte/jquery.sparkline.min.js"></script>
+<!-- jvectormap  -->
+<script src="${javascript_folder}/adminlte/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="${javascript_folder}/adminlte/jquery-jvectormap-world-mill-en.js"></script>
+<!-- ChartJS -->
+<script src="${javascript_folder}/adminlte/Chart.min.js"></script>
 
 </body>
 

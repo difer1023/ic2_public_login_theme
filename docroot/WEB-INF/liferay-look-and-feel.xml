@@ -5,7 +5,7 @@
 	<compatibility>
 		<version>6.2.5+</version>
 	</compatibility>
-	<theme id="colciencias" name="colciencias-theme">
+	<theme id="colciencias" name="ic2-public-login-theme">
 		<template-extension>ftl</template-extension>
 	</theme>
 </look-and-feel>
